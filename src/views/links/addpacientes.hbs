@@ -1,0 +1,56 @@
+<div class="container p-4">
+  <div class="row">
+    <div class="col-md-4 mx-auto">
+      <div class="card text-center">
+        <div class="card-header">
+          <h3>Regístrar paciente</h3>
+        </div>
+        <div class="card-body">
+          <form action="/links/addpacientes" method="POST">
+            <div class="form-group">
+              <input type="text" name="nombre" placeholder="Nombre" class="form-control" autofocus>
+            </div>
+            <div class="form-group">
+              <input type="text" name="apellidopaterno" placeholder="Apellido Paterno" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="text" name="apellidomaterno" placeholder="Apellido Materno" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="text" name="rfc" placeholder="RFC (homoclave opcional)" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Correo electronico" class="form-control">
+            </div>
+            <div class="form-group">
+              <select name="idevaluador" class="form-control">
+                {{#each evaluadores}}
+                  <option value={{id}}>{{nombrelogin}}</option>
+                {{/each}}
+              </select>
+            </div>
+            <div class="form-group">
+              <select name="idfisio" class="form-control">
+                {{#each fisios}}
+                  <option value={{id}}>{{nombrelogin}}</option>
+                {{/each}}
+              </select>
+            </div>
+            <div class="form-group">
+              <select name="iddoctor" class="form-control">
+                {{#each doctores}}
+                  <option value={{id}}>{{nombrelogin}}</option>
+                {{/each}}
+              </select>
+            </div>
+            <div class="form-group">
+              <button class="btn btn-success btn-block">
+                Registrar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

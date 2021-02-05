@@ -1,0 +1,26 @@
+<div class="container p-4">
+    <div class="row">
+        {{#each doctores}}
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h3 class="card-title text-uppercase">
+                        {{id}} {{nombre}}
+                    </h3>
+                    <p class="m-2">Dr. {{nombre}} {{apellidopaterno}} {{apellidomaterno}} </p>
+                    <p>{{timeago fecregistro}}</p>
+                    <a href="/links/deleteuser/{{id}}" class="btn btn-danger">Borrar</a>
+                    <a href="/links/edituser/{{id}}" class="btn btn-secondary">Editar</a>
+                </div>
+            </div>
+        </div>
+        {{else}}
+            <div class="col-md-4 mx-auto">
+                <div class="card card-body text-center">
+                    <p>No hay Doctores registrados</p>
+                    <a href="/links/adduser">Registrar nuevo Doctor</a>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>

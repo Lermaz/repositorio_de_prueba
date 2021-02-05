@@ -1,0 +1,42 @@
+<div class="container p-4">
+  <div class="row">
+    <div class="col-md-4 mx-auto">
+      <div class="card text-center">
+        <div class="card-header">
+          <h3>Modificar usuario</h3>
+        </div>
+        <div class="card-body">
+          <form action="./edituser/{{usuario.id}}" method="POST">
+            <div class="form-group">
+              <input type="text" name="nombre" placeholder="Nombre" value="{{usuario.nombre}}" class="form-control" autofocus>
+            </div>
+            <div class="form-group">
+              <input type="text" name="apellidopaterno" placeholder="Apellido Paterno" value="{{usuario.apellidopaterno}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="text" name="apellidomaterno" placeholder="Apellido Materno" value="{{usuario.apellidomaterno}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <select name="idtipousuario" class="form-control">
+                {{#each usuarios}}
+                  <option value={{id}}>{{nombre}}</option>
+                {{/each}}
+              </select>
+            </div>
+            <div class="form-group">
+              <input type="text" name="nombrelogin" placeholder="Nombre de Usuario" value="{{usuario.nombrelogin}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Correo electronico" value="{{usuario.email}}" class="form-control">
+            </div>
+            <div class="form-group">
+            <button class="btn btn-success btn-block">
+                Guardar
+            </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="container p-4">
+    <div class="row">
+        {{#each comentarios}}
+        <div class="col-md-3 mx-auto">
+            <div class="card card-body text-center">
+                <p class="m-2">{{nombrelogin}}</p>
+                <p class="m-2">{{nombre}}</p>
+                <p class="m-2">{{timeago feccomentario}}</p>
+                <p class="m-2">{{comentario}}</p>
+                    <!-- <a href="/links/edituser/{{id}}" class="btn btn-secondary">Editar</a> -->
+            </div>
+        </div>
+        {{else}}
+            <div class="col-md-4 mx-auto">
+                <div class="card card-body text-center">
+                    <p>No hay comentarios aun, desea agregar uno</p>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+    <a href="/links/addcoment/{{tmp}}" class="btn btn-primary">Agregar Comentario</a>
+</div>
